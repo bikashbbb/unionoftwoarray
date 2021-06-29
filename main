@@ -14,7 +14,7 @@ def solution(a,b):
             union.append(b[j])
             i+=1
             j+=1
-    if i != len(b):
+    if i != len(a):
         union = union + (a[i::])
     if j!= len(b):
         union = union + b[j::]
