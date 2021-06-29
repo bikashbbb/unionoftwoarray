@@ -1,0 +1,24 @@
+def solution(a,b):
+    union = []
+    i,j = 0,0
+    while i< len(a) and j<len(b):
+        if a[i] < b[j]: # if run vayesi aru run
+            
+                union.append(a[i]) #
+                i+=1 # i = 1
+        elif a[i]> b[j]:
+            
+                union.append(b[j])
+                j+=1
+        else:
+            union.append(b[j])
+            i+=1
+            j+=1
+    if i != len(b):
+        union = union + (a[i::])
+    if j!= len(b):
+        union = union + b[j::]
+    return union
+
+print(solution([1,3,4,9,],[10,11,12,13]))
+
